@@ -1,10 +1,10 @@
 import { LayoutGroup, motion } from "framer-motion";
 import Link from "next/link"
 import { useRouter } from "next/router";
-import { routes } from "../../data/data";
+import { routes } from "../data/routes";
 
 const Logo = () => {
-    // TODO: change font for the logo
+    // TODO: change font for the logo; fix spacing
     return (
         <motion.div
         initial={{ opacity: 0, scale: 0.1 }}
