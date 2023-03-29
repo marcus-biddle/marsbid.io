@@ -9,8 +9,8 @@ const Logo = () => {
         <motion.div
         initial={{ opacity: 0, scale: 0.1 }}
         animate={{
-            scale: 5,
-            x: 170,
+            scale: 3,
+            x: 85,
             y: -25,
             opacity: 1
         }}
@@ -26,8 +26,8 @@ export default function Sidebar() {
     const { pathname } = useRouter();
     
     return (
-        <div className="lg:sticky lg:top-20">
-            <div>
+        <div className="mr-10 pt-[1.77rem]">
+            <div className="mb-5">
             <Logo />
             </div>
             <LayoutGroup>
@@ -40,7 +40,7 @@ export default function Sidebar() {
                             className={`capitalize z-50 transition-all`}
                             >
                                 <span className="relative">
-                                    <div className={`pt-1 px-2 ${pathname === route.path ? 'font-bold' : 'text-neutral-500'}`}>
+                                    <div className={`pt-1 px-2 ${pathname === route.path ? 'font-bold text-black' : 'text-neutral-500'}`}>
                                     {route.name}
                                     </div>
                                     {pathname === route.path ? (
