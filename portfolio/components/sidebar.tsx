@@ -27,9 +27,9 @@ export default function Sidebar() {
     
     return (
         <div className=" mr-16 pt-[1.77rem]">
-            <div className="mb-5">
-            <Logo />
-            </div>
+            <Link href='/' className="mb-5">
+                <Logo />
+            </Link>
             <LayoutGroup>
                 <nav className="relative flex flex-col items-start space-x-0 space-y-3">
                     {routes.map((route) => {
