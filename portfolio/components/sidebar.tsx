@@ -26,7 +26,7 @@ export default function Sidebar() {
     const { pathname } = useRouter();
     
     return (
-        <div className="mr-10 pt-[1.77rem]">
+        <div className=" mr-16 pt-[1.77rem]">
             <div className="mb-5">
             <Logo />
             </div>

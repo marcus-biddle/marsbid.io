@@ -4,8 +4,8 @@ export const routes = [
         name: 'home'
     },
     {
-        path: '/tech',
-        name: 'tech'
+        path: '/projects',
+        name: 'projects'
     },
     {
         path: '/workouts',

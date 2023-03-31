@@ -16,7 +16,7 @@ export const bio = () => {
         <>
         From 9-5, I'm a QA Engineer that executes and maintains test case methods in Selenium based web automations. 
         However, on my free time, my passion is frontend development. My favorite library is React, which over the past year 
-        I have been fortunate enough to learn and grow my love for it.
+        I have been fortunate enough to expand my knowledge and love on the subject.
         </>
     );
 };

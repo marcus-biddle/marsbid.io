@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className='flex mx-72 mt-32'>
+    <div className='flex px-72 pt-32 h-screen bg-black'>
     <Sidebar />
     <Component {...pageProps} />
     </div>
