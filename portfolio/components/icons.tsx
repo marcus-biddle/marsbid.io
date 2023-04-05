@@ -1,5 +1,5 @@
-import Github from '../data/github2.svg'
-import Resume from '../data/info3.svg'
+import Github from '../data/github.svg'
+import Resume from '../data/info.svg'
 import Contact from '../data/connect.svg'
 
 export function GithubIcon() {

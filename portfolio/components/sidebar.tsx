@@ -10,7 +10,7 @@ const Logo = () => {
         initial={{ opacity: 0, scale: 0.1 }}
         animate={{
             scale: 3,
-            x: 85,
+            x: 90,
             y: -25,
             opacity: 1
         }}
@@ -31,7 +31,7 @@ export default function Sidebar() {
                 <Logo />
             </Link>
             <LayoutGroup>
-                <nav className="relative flex flex-col items-start space-x-0 space-y-3">
+                <nav className="relative flex flex-col items-start space-x-0 space-y-3 w-[5.65rem]">
                     {routes.map((route) => {
                     return (
                         <Link
