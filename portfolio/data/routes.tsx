@@ -8,8 +8,8 @@ export const routes = [
         name: 'projects'
     },
     {
-        path: '/workouts',
-        name: 'workouts'
+        path: '/contact',
+        name: 'contact'
     },
     {
         path: '/chess',

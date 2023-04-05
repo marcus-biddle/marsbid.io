@@ -12,12 +12,12 @@ export default function Projects() {
         <section className="w-full">
             <h1 className='text-3xl font-bold'>Projects</h1>
             <p className=' my-5'>Below is a list of personal projects. To view all my repos please click{' '}
-            <a 
-            href='https://github.com/marcus-biddle'
-            className='cursor-pointer underline'
-            >
-                here.
-            </a>
+                <a 
+                href='https://github.com/marcus-biddle'
+                className='cursor-pointer underline'
+                >
+                    here.
+                </a>
             </p>
             <Accordion open={false} data={projects}/>
         </section>

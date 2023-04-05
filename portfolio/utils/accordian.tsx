@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Data } from "../data/projects";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 interface AccordionProps {
     open: boolean;
@@ -25,13 +25,13 @@ const Panel = ({
     activeTab,
     activePanel
  }: PanelProps) => {
-    const [height, setHeight] = useState(0);
-    const [active, setActive] = useState(open);
+    // const [height, setHeight] = useState(0);
+    // const [active, setActive] = useState(open);
 
     const isActive = activeTab === index;
     const variants = {
         open: { opacity: 1, y: 0},
-        closed: { opacity: 0, y: '-100%'},
+        closed: { opacity: 0, y: '-5%'},
     }
     
     return (
@@ -45,11 +45,13 @@ const Panel = ({
                 </p>
             </button>
                 <div aria-hidden={isActive} >
-                    {/* <div>{children}</div> */}
                     <motion.div
                     animate={isActive ? "open" : "closed"}
                     variants={variants}
-                    transition={{ stiffness: .5 }}
+                    transition={{ 
+                        stiffness: .5,
+                        delay: .15
+                     }}
                     >
                         { isActive? children : null}
                     </motion.div>
