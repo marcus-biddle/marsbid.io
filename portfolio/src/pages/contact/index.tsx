@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { FormEvent, useEffect, useState } from "react"
+import Button from "../../../utils/button";
 
 async function saveFormData(data: object) {
     return await fetch("/api/form", {
@@ -18,7 +20,7 @@ const Form = () => {
 
     const onSubmit = (e: FormEvent) => {
         e.preventDefault();
-        const response = await saveFormData(formData);
+        // const response = await saveFormData(formData);
         // https://www.propelauth.com/post/creating-advanced-reusable-forms-in-next-js
     }
 
@@ -49,9 +51,15 @@ export default function Contact() {
     return (
         <div>
             <h1 className='text-3xl font-bold'>Contact Me</h1>
-            <p className=' my-5'>{'Below are my contact information. '}</p>
+            <p className=' my-5'>{'Below you can find my resume and contact information.'}</p>
 
-            <Form />
+            {/* <p>Resume</p> */}
+            
+                <Button>
+                <Link href='' locale={false} download={"/file_name.pdf"}>resume
+                </Link>
+                </Button>
+            
         </div>
     )
 }

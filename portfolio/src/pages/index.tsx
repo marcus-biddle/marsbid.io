@@ -4,8 +4,22 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { about, avatar, bio, name } from '../../data/info';
 import { ContactIcon, GithubIcon, ResumeIcon } from '../../components/icons';
+import Link from 'next/link';
 
 //TODO remove social icons package
+
+const icons = [
+  {
+    icon: GithubIcon(),
+    name: 'Github Profile',
+    path: 'https://github.com/marcus-biddle'
+  },
+  {
+    icon: ResumeIcon(),
+    name: 'LinkedIn @marcusbiddle',
+    path: ''
+  },
+]
 
 export default function Home() {
   return (
@@ -22,7 +36,18 @@ export default function Home() {
         priority
         />
         <div className=' mt-2 flex flex-col gap-y-1'>
-          <a 
+          {icons.map((link) => {
+            return (
+              <a 
+              href={link.path} 
+              key={link.name}
+              className='flex items-center gap-6 opacity-50 cursor-pointer hover:opacity-100'
+              >
+                {link.icon} {link.name}
+              </a>
+            )
+          })}
+          {/* <a 
           href='https://github.com/marcus-biddle'
           className='flex items-center gap-6 opacity-50 cursor-pointer hover:opacity-100'
           >
@@ -30,15 +55,17 @@ export default function Home() {
             {'Github profile'}
           </a>
           <a className='flex items-center gap-6 opacity-50 cursor-pointer hover:opacity-100'>
-            {/* INSERT RESUME */}
+            LinkedIN Icon instead
             {ResumeIcon()}
-            {'Resume'}
-          </a>
-          <a className='flex items-center gap-6 opacity-50 cursor-pointer hover:opacity-100'>
+            {'LinkedIn @marcusbiddle'}
+          </a> */}
+          <Link 
+          href='/contact'
+          className='flex items-center gap-6 opacity-50 cursor-pointer hover:opacity-100'>
             {/* take user to contact form */}
             {ContactIcon()}
             {'Contact me'}
-          </a>
+          </Link>
         </div>
       </div>
       <p>

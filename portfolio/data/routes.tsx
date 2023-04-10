@@ -11,10 +11,10 @@ export const routes = [
         path: '/contact',
         name: 'contact'
     },
-    {
-        path: '/chess',
-        name: 'chess'
-    },
+    // {
+    //     path: '/chess',
+    //     name: 'chess'
+    // },
     {
         path: '/about',
         name: 'about'
